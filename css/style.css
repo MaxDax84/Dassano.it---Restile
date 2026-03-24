@@ -805,6 +805,54 @@ body::before {
   50%       { opacity: 1;   transform: scaleY(1.15); }
 }
 
+/* ===== YOUTUBE FACADE (lazy load) ===== */
+.yt-facade {
+  position: relative;
+  padding-bottom: 56.25%;
+  background: #000;
+  cursor: pointer;
+  overflow: hidden;
+}
+.yt-facade img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.yt-facade:hover img { opacity: 1; }
+.yt-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.yt-play-btn {
+  width: 64px;
+  height: 64px;
+  background: rgba(192,57,43,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+.yt-facade:hover .yt-play-btn {
+  background: var(--accent-bright);
+  transform: scale(1.1);
+}
+.yt-facade iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* ===== BAND PHOTO ===== */
 .band-photo {
   width: 100%;
