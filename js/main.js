@@ -97,4 +97,11 @@
     observer.observe(el);
   });
 
+  /* ── Auto alt text on video thumbnails from title ── */
+  document.querySelectorAll('.video-card').forEach(card => {
+    const title = card.querySelector('.video-info h3');
+    const img = card.querySelector('.yt-facade img');
+    if (title && img) img.alt = title.textContent.trim();
+  });
+
 })();
