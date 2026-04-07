@@ -438,8 +438,8 @@ body::before {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid var(--border-accent);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
   padding: 0.25rem 0.65rem;
   border-radius: 2px;
   width: fit-content;
